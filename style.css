@@ -22,10 +22,13 @@
 }
 
 .abcd {
+  position: relative;
  display: block;
  height: 10vh;
  width: 20vh;
  visibility: hidden;
+ left: 50%;
+ transform: translate(-50%,0);
 }
 
 
