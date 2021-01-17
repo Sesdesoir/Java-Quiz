@@ -3,6 +3,10 @@ var question = document.querySelector("#question");
 var multiChoiceDiv = document.querySelector("#multiChoice");
 var startButton = document.querySelector("#start");
 var header = document.querySelector("#headDiv");
+var a = document.querySelector("a");
+var b = document.querySelector("b");
+var c = document.querySelector("c");
+var d = document.querySelector("d");
 //Variables
 var timer = 6;
 //Array of predefined question objects *currently no constructor for more objects*
@@ -98,15 +102,8 @@ startButton.addEventListener("click", function(event){
 });
 
 //Multiple choice div where the actual questions take place
-question.innerText = questions[Math.floor(Math.random()*questions.length)];
-var a = document.createElement("button");
-var b = document.createElement("button");
-var c = document.createElement("button");
-var d = document.createElement("button");
-multiChoiceDiv.appendChild(a);
-multiChoiceDiv.appendChild(b);
-multiChoiceDiv.appendChild(c);
-multiChoiceDiv.appendChild(d);
+//question.innerText = questions[Math.floor(Math.random()*questions.length)];
+
 
 
    

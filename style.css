@@ -3,7 +3,7 @@
 }
 
 #start {
- position: absolute;
+ position: relative;
  left: 50%;
  transform: translate(-50%, 0);
  height: 10vh;
@@ -11,6 +11,21 @@
  font-size: large;
  background-color: rgb(31, 197, 183);
  border-color: gold;
+}
+
+#multiChoice {
+ margin: 5vh 0 5vh 10vh;
+}
+#question{
+  margin-bottom: 5vh;
+  visibility: hidden;
+}
+
+.abcd {
+ display: block;
+ height: 10vh;
+ width: 20vh;
+ visibility: hidden;
 }
 
 
