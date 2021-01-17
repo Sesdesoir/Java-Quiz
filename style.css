@@ -1,3 +1,16 @@
 #title , #question {
   text-align: center;  
-};
+}
+
+#start {
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%, 0);
+ height: 10vh;
+ width: 20vh;
+ font-size: large;
+ background-color: rgb(31, 197, 183);
+ border-color: gold;
+}
+
+
