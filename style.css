@@ -16,19 +16,32 @@
 #multiChoice {
  margin: 5vh 0 5vh 10vh;
 }
+
 #question{
   margin-bottom: 5vh;
   visibility: hidden;
 }
 
+
+
+
 .abcd {
+  display: inline;
   position: relative;
- display: block;
- height: 10vh;
- width: 20vh;
- visibility: hidden;
- left: 50%;
- transform: translate(-50%,0);
+  height: 10vh;
+  width: 20vh;
+  visibility: hidden;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.choice{
+  display: inline;
+  position: relative;
+  visibility: hidden;
+  left: 40%;
+  font-weight: bold;
+  font-size: large;
 }
 
 
