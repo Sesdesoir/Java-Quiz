@@ -2,6 +2,7 @@
 var question = document.querySelector("#question");
 var multiChoiceDiv = document.querySelector("#multiChoice");
 var startButton = document.querySelector("#start");
+var resetButton = document.querySelector("#reset");
 var header = document.querySelector("#headDiv");
 var a = document.querySelector("#a");
 var b = document.querySelector("#b");
@@ -71,48 +72,48 @@ answer:"var variable = true;"
 },
 //Q6
 {
-questionNum: "How do you display something to the console?",
-ChoiceA:"print();",
-ChoiceB:"display();",
-ChoiceC:"console();",
-ChoiceD:"console.log();",
-answer:"console.log();"
+questionNum: "How do you create an html element in Javascript?",
+ChoiceA:"document.createElement('div');",
+ChoiceB:"document.create('p');",
+ChoiceC:"document.element('h1');",
+ChoiceD:"document.createHtml('h3');",
+answer:"document.createElement('div');"
 },
 //Q7
 {
-questionNum: "How do you display something to the console?",
-ChoiceA:"print();",
-ChoiceB:"display();",
-ChoiceC:"console();",
-ChoiceD:"console.log();",
-answer:"console.log();"
+questionNum: "How do you atatch an html element to the webpage?",
+ChoiceA:"id.atatchChild(element);",
+ChoiceB:"id.appendChild(element);",
+ChoiceC:"id.appendHtml(element);",
+ChoiceD:"id.atatchHtml(element);",
+answer:"id.appendChild(element);"
 },
 //Q8
 {
-questionNum: "How do you display something to the console?",
-ChoiceA:"print();",
-ChoiceB:"display();",
-ChoiceC:"console();",
-ChoiceD:"console.log();",
-answer:"console.log();"
+questionNum: "Which is not a way to alter the contents of an html element?",
+ChoiceA:"element.innerText = 'Yo Ho!';",
+ChoiceB:"element.innerHtml = 'Yo Ho!';",
+ChoiceC:"element.changeText = 'A pirate's life';",
+ChoiceD:"element.textContent = 'for me.';",
+answer:"element.changeText = 'A pirate's life';"
 },
 //Q9
 {
-questionNum: "How do you display something to the console?",
-ChoiceA:"print();",
-ChoiceB:"display();",
-ChoiceC:"console();",
-ChoiceD:"console.log();",
-answer:"console.log();"
+questionNum: "How do you alter the css of an html element using javascript?",
+ChoiceA:"css.element",
+ChoiceB:"element.css",
+ChoiceC:"style.element",
+ChoiceD:"element.style",
+answer:"element.style"
 },
 //Q10
 {
-questionNum: "How do you display something to the console?",
-ChoiceA:"print();",
-ChoiceB:"display();",
-ChoiceC:"console();",
-ChoiceD:"console.log();",
-answer:"console.log();"
+questionNum: "How do you get a random number?",
+ChoiceA:"Math.random()",
+ChoiceB:"number.random()",
+ChoiceC:"random.number()",
+ChoiceD:"randomNumber()",
+answer:"Math.random()"
 }];
 //Essentially being used to console track how many questions are left. This is the beginning and should be 10
 console.log("Beginning " + questions.length);
@@ -154,6 +155,10 @@ function intervalSet(){
         letterheadB.style.visibility = "hidden";
         letterheadC.style.visibility = "hidden";
         letterheadD.style.visibility = "hidden";
+        var initials = prompt("Please enter your initials.", "Initials Here");
+        localStorage.setItem("Initials", initials);
+        localStorage.setItem("Score", score);
+        resetButton.style.display = "initial";
         clearInterval(interval);
     }
 },1000)};
@@ -188,6 +193,7 @@ a.addEventListener("click", function(){
             pickQuestion();
             }
         else{
+            timer -= 10;
             score -= 10;
             console.log(score + "points");
             console.log(questions.length + " questions left.");
@@ -203,6 +209,7 @@ a.addEventListener("click", function(){
             isOver = true;
         }
         else{
+            timer -= 10;
             score -= 10;
             score += (timer * 10);
             console.log(score + "points Quiz Over");
@@ -222,6 +229,7 @@ b.addEventListener("click", function(){
             pickQuestion();
             }
         else{
+            timer -= 10;
             score -= 10;
             console.log(score + "points");
             console.log(questions.length + " questions left.");
@@ -237,6 +245,7 @@ b.addEventListener("click", function(){
             isOver = true;
         }
         else{
+            timer -= 10;
             score -= 10;
             score += (timer * 10);
             console.log(score + "points Quiz Over");
@@ -256,6 +265,7 @@ c.addEventListener("click", function(){
             pickQuestion();
             }
         else{
+            timer -= 10;
             score -= 10;
             console.log(score + "points");
             console.log(questions.length + " questions left.");
@@ -271,6 +281,7 @@ c.addEventListener("click", function(){
             isOver = true;
         }
         else{
+            timer -=10;
             score -= 10;
             score += (timer * 10);
             console.log(score + "points Quiz Over");
@@ -290,6 +301,7 @@ d.addEventListener("click", function(){
             pickQuestion();
             }
         else{
+            timer -= 10;
             score -= 10;
             console.log(score + "points");
             console.log(questions.length + " questions left.");
@@ -305,6 +317,7 @@ d.addEventListener("click", function(){
             isOver = true;
         }
         else{
+            timer -=10;
             score -= 10;
             score += (timer * 10);
             console.log(score + "points Quiz Over");
@@ -313,6 +326,16 @@ d.addEventListener("click", function(){
     }
 });
 
+// Reset button
+resetButton.addEventListener("click", function(event){
+    event.preventDefault;
+    startButton.style.display = "initial";
+    resetButton.style.display = "none";
+    isOver = false;
+    timer = 60;
+    score = 0;
+    question.innerText = "";
+})
 
 
 
