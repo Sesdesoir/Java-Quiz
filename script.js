@@ -335,6 +335,97 @@ resetButton.addEventListener("click", function(event){
     timer = 60;
     score = 0;
     question.innerText = "";
+    questions = [
+//Q1
+{
+questionNum: "How do you display something to the console?",
+ChoiceA:"print();",
+ChoiceB:"display();",
+ChoiceC:"console();",
+ChoiceD:"console.log();",
+answer:"console.log();"
+},
+//Q2
+{
+questionNum: "In a setInterval(function(){} , time) what is the value of time?",
+ChoiceA:"Seconds",
+ChoiceB:"lilseconds",
+ChoiceC:"miliseconds",
+ChoiceD:"minutes",
+answer:"miliseconds"
+},
+//Q3
+{
+questionNum: "What kind of loop do we use to iterate over an array?",
+ChoiceA:"while loop",
+ChoiceB:"for loop",
+ChoiceC:"if loop",
+ChoiceD:"else loop",
+answer:"for loop"
+},
+//Q4
+{
+questionNum: "function myFunction(name){}; What is 'name' called?",
+ChoiceA:"An argument",
+ChoiceB:"A query",
+ChoiceC:"A variable",
+ChoiceD:"A function",
+answer:"An argument"
+},
+//Q5
+{
+questionNum: "How do you declare a variable in javascript?",
+ChoiceA:"int i = 0;",
+ChoiceB:"char letter = 'y';",
+ChoiceC:"var fancy === 'feast';",
+ChoiceD:"var variable = true;",
+answer:"var variable = true;"
+},
+//Q6
+{
+questionNum: "How do you create an html element in Javascript?",
+ChoiceA:"document.createElement('div');",
+ChoiceB:"document.create('p');",
+ChoiceC:"document.element('h1');",
+ChoiceD:"document.createHtml('h3');",
+answer:"document.createElement('div');"
+},
+//Q7
+{
+questionNum: "How do you atatch an html element to the webpage?",
+ChoiceA:"id.atatchChild(element);",
+ChoiceB:"id.appendChild(element);",
+ChoiceC:"id.appendHtml(element);",
+ChoiceD:"id.atatchHtml(element);",
+answer:"id.appendChild(element);"
+},
+//Q8
+{
+questionNum: "Which is not a way to alter the contents of an html element?",
+ChoiceA:"element.innerText = 'Yo Ho!';",
+ChoiceB:"element.innerHtml = 'Yo Ho!';",
+ChoiceC:"element.changeText = 'A pirate's life';",
+ChoiceD:"element.textContent = 'for me.';",
+answer:"element.changeText = 'A pirate's life';"
+},
+//Q9
+{
+questionNum: "How do you alter the css of an html element using javascript?",
+ChoiceA:"css.element",
+ChoiceB:"element.css",
+ChoiceC:"style.element",
+ChoiceD:"element.style",
+answer:"element.style"
+},
+//Q10
+{
+questionNum: "How do you get a random number?",
+ChoiceA:"Math.random()",
+ChoiceB:"number.random()",
+ChoiceC:"random.number()",
+ChoiceD:"randomNumber()",
+answer:"Math.random()"
+}];
 })
 
 
